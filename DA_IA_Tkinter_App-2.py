@@ -346,6 +346,10 @@ class Application(Frame):
                             s_matched[i] = j
                             s_filled[i] = 1
                             step[i] = t
+                            if position[rejected]==C:
+                                s_matched[rejected] = -1
+                                s_filled[rejected] = 1
+                                num_match += 1
                         else:
                             position[i] += 1
                             step[i] = 0
